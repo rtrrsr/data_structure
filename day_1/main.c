@@ -35,16 +35,27 @@ int main(void) {
 }
 ****************************************************************/
 //关于指针变量
-#include <stdio.h>
-void f();
-int main(void) {
-    int i;
-    int *p = &i;
-    printf("%p\n", p);
-    f(&p);
-    printf("%p\n", p);
-}
+// #include <stdio.h>
+// void f();
+// int main(void) {
+//     int i;
+//     int *p = &i;
+//     printf("%p\n", p);
+//     f(&p);
+//     printf("%p\n", p);
+// }
 
-void f(int ** q) {
-    *q = (int *)0x000000000065FE24;
+// void f(int ** q) {
+//     *q = (int *)0x000000000065FE24;
+// }
+
+
+int main() {
+    int i;
+    int arr[10] = {0};
+    
+    for(i = 0; i < 10; i++) {
+        printf("arr[%d] = %d\n", i, arr[i]);
+    }
+    return 0;
 }
